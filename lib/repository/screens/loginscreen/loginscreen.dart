@@ -1,3 +1,4 @@
+import 'package:blinkit_app/repository/screens/bottomnav/bottomnavscreen.dart';
 import 'package:blinkit_app/repository/widget/uihelper.dart';
 import 'package:flutter/material.dart';
 
@@ -54,7 +55,14 @@ class Loginscreen extends StatelessWidget {
                       height: 48,
                       width: 295,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ButtomNavScreen(),
+                            ),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFFE23744),
                           shape: RoundedRectangleBorder(
@@ -76,7 +84,7 @@ class Loginscreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 8,),
+                    SizedBox(height: 8),
                     Uihelper.CustomText(
                       text:
                           "Access your saved addresses from Zomato automatically!",
@@ -84,8 +92,13 @@ class Loginscreen extends StatelessWidget {
                       fontweight: FontWeight.normal,
                       fontsize: 10,
                     ),
-                    SizedBox(height: 30,),
-                    Uihelper.CustomText(text: "or login with phone number", color: Color(0xFF269237), fontweight: FontWeight.w400, fontsize: 14),
+                    SizedBox(height: 30),
+                    Uihelper.CustomText(
+                      text: "or login with phone number",
+                      color: Color(0xFF269237),
+                      fontweight: FontWeight.w400,
+                      fontsize: 14,
+                    ),
                   ],
                 ),
               ),
