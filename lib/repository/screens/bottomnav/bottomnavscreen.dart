@@ -40,7 +40,11 @@ class _ButtomNavScreenState extends State<ButtomNavScreen> {
           BottomNavigationBarItem(
             icon: Uihelper.CustomImage(img: "printer 1.png"), label: "Print"
           ),
-        ],type: BottomNavigationBarType.fixed,
+        ],type: BottomNavigationBarType.fixed, currentIndex : currentIndex, onTap: (index){
+          setState(() {
+            currentIndex = index;
+          });
+    },
       ),
     );
   }
